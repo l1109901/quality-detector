@@ -1,0 +1,79 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <fragment
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="com.example.gafur.coveragequalitydetector.MapsActivity" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="top">
+
+        <Button
+            android:id="@+id/btnStart"
+            android:layout_width="80dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="0dp"
+            android:text="START"
+            android:onClick="startSignal"/>
+
+        <Button
+            android:id="@+id/btnDirection"
+            android:layout_width="80dp"
+            android:layout_height="50dp"
+            android:layout_toRightOf="@+id/btnStart"
+            android:layout_marginLeft="0dp"
+            android:text="STOP"
+            android:onClick="stopSignal"/>
+
+        <Spinner
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_toRightOf="@+id/btnDirection"
+            android:layout_marginLeft="0dp"
+            android:id="@+id/spinner"
+            android:prompt="@string/spinner_title"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="bottom">
+
+        <Button
+            android:id="@+id/btnBest"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="0dp"
+            android:text="GET BEST"
+            android:onClick="getBestStrength"/>
+
+        <Button
+            android:id="@+id/btnWorst"
+            android:layout_width="115dp"
+            android:layout_height="50dp"
+            android:layout_toRightOf="@+id/btnBest"
+            android:layout_marginLeft="0dp"
+            android:text="GET WORST"
+            android:onClick="getWorstStrength"/>
+
+        <Button
+            android:id="@+id/btnZoom"
+            android:layout_width="115dp"
+            android:layout_height="50dp"
+            android:layout_toRightOf="@+id/btnWorst"
+            android:layout_marginLeft="0dp"
+            android:text="ZOOM"
+            android:onClick="zoomMyMap"/>
+
+    </RelativeLayout>
+
+</FrameLayout>

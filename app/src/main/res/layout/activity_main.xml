@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context=".MainActivity">
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="COVERAGE QUALITY DETECTOR"
+            android:textAlignment="center"
+            android:textColor="#ff87ff09"
+            android:textSize="20dp"
+            android:layout_below="@+id/btn_recording_phase"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="20dp" />
+
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btn_signal_strength"
+            android:text="start signal service"
+            android:onClick="startSignal"
+            android:layout_centerHorizontal="true" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="stop signal service"
+            android:id="@+id/btn_stop"
+            android:onClick="stopSignal"
+            android:layout_below="@+id/btn_signal_strength"
+            android:layout_alignLeft="@+id/btn_signal_strength"
+            android:layout_alignStart="@+id/btn_signal_strength"
+            android:layout_alignRight="@+id/btn_signal_strength"
+            android:layout_alignEnd="@+id/btn_signal_strength"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="get operator name"
+            android:id="@+id/btn_operator"
+            android:onClick="findOperator"
+            android:layout_below="@+id/btn_stop"
+            android:layout_alignLeft="@+id/btn_stop"
+            android:layout_alignStart="@+id/btn_stop"
+            android:layout_alignRight="@+id/btn_stop"
+            android:layout_alignEnd="@+id/btn_stop"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="login for recording phase"
+            android:id="@+id/btn_recording_phase"
+            android:onClick="recordingPhase"
+            android:layout_below="@+id/btn_operator"
+            android:layout_alignLeft="@+id/btn_operator"
+            android:layout_alignStart="@+id/btn_operator"
+            android:layout_alignRight="@+id/btn_operator"
+            android:layout_alignEnd="@+id/btn_operator"/>
+</RelativeLayout>
